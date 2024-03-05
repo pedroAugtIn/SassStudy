@@ -1,0 +1,31 @@
+// sass input.scss output.css para compilar nosso scss em css
+
+@for $i from 1 through 6 {
+  .text-#{$i} { font-size: 15px * $i; }
+}
+
+@each $color in blue, black, red{
+    .#{$color}-bg { background-color: $color }
+  }
+
+  div {
+    height: 200px;
+    width: 200px;
+  }
+
+  $x: 7;
+  @while $x < 12 {
+    .text-#{$x} { font-size: 15px * $x}
+  $x: $x + 1;
+  }
+
+  .info{
+    width: 200px;
+    border: 1px solid black;
+    margin: 0 auto;
+  }
+
+.info-important{
+  @extend .info;
+background-color: magenta;
+}
